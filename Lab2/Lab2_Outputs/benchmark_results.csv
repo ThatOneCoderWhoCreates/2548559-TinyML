@@ -1,0 +1,5 @@
+Quantization Scheme,Target Data Type,Model Size (KB),Accuracy (%),Memory Reduction (%),Latency (µs/window)
+Baseline (Unquantized),Float32,37.15234375,94.28571428571428,0.0,1.9883320201188326
+Dynamic Range,"Weights int8, Act float32",13.9921875,94.28571428571428,62.3383450741247,2.23483401350677
+Float16 Quantization,Float16,20.55078125,94.28571428571428,44.68510146146567,1.4475820353254676
+Full Integer (PTQ),"Weights int8, Act int8",16.3515625,94.28571428571428,55.9878035958364,1.5761679969727993
