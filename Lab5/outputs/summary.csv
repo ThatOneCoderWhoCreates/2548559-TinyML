@@ -1,0 +1,11 @@
+item,lab target,this notebook
+Balanced dataset (stop / _unknown_ / _silence_),balanced in every split,train: 795/795/795 | validation: 98/98/98 | test: 107/107/107
+Speaker-wise split,80 / 10 / 10 by speaker,no speaker shared between splits
+MFCC shape,49 x 10,49 x 10
+DS-CNN parameters,small enough for 100 KB,"23,747"
+"Test accuracy, unseen speakers (float32)",about 85 to 95%,98.44%
+"Test accuracy, unseen speakers (int8)",less than 1% loss,98.75% (+0.31 points)
+Misses (int8),as low as possible,4 of 107 stop clips (3.7%)
+False alarms (int8),low,0 of 214 other clips (0.0%)
+int8 model size,"about 45 to 50 KB, under 100 KB",45.5 KB
+float32 TFLite size,,94.9 KB

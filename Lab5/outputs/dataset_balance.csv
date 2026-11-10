@@ -1,0 +1,5 @@
+split,stop,_unknown_,_silence_,total,share of data
+train,795,795,795,2385,79.5 %
+validation,98,98,98,294,9.8 %
+test,107,107,107,321,10.7 %
+total,1000,1000,1000,3000,100.0 %

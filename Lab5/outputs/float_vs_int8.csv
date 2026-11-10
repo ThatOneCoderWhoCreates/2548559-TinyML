@@ -1,0 +1,4 @@
+model,size (KB),test accuracy (%),misses,false alarms,ms per clip (laptop)
+Keras float32 (.keras),405.14,98.44,4,1,
+TFLite float32,94.87,98.44,4,1,0.04
+TFLite int8,45.55,98.75,4,0,0.04

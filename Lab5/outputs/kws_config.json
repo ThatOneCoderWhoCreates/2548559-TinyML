@@ -1,0 +1,119 @@
+{
+  "project": "SafeLine voice emergency stop (Lab 5, Tanmay Gautam, 2548559)",
+  "model_file": "kws_int8.tflite",
+  "labels": [
+    "stop",
+    "_unknown_",
+    "_silence_"
+  ],
+  "keyword": "stop",
+  "keyword_index": 0,
+  "audio": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "clip_seconds": 1.0,
+    "clip_samples": 16000,
+    "amplitude_range": [
+      -1.0,
+      1.0
+    ],
+    "shorter_clips": "zero-pad at the end to clip_samples"
+  },
+  "features": {
+    "type": "mfcc",
+    "window_ms": 30,
+    "hop_ms": 20,
+    "frame_length": 480,
+    "frame_step": 320,
+    "fft_length": 512,
+    "window_function": "hann",
+    "spectrogram": "magnitude (abs of STFT), no padding at the end",
+    "num_mel_bins": 40,
+    "mel_low_hz": 20.0,
+    "mel_high_hz": 7600.0,
+    "log_offset": 1e-06,
+    "num_mfcc": 10,
+    "num_frames": 49,
+    "implementation": "tf.signal.stft -> tf.signal.linear_to_mel_weight_matrix -> log -> tf.signal.mfccs_from_log_mel_spectrograms, keep first num_mfcc"
+  },
+  "normalization": {
+    "formula": "(mfcc - mean) / std, per coefficient",
+    "mean": [
+      -24.646769,
+      1.091844,
+      0.602408,
+      0.222064,
+      -0.106941,
+      0.279898,
+      0.105864,
+      0.154903,
+      -0.023052,
+      0.135235
+    ],
+    "std": [
+      21.767832,
+      4.339309,
+      2.39613,
+      1.561896,
+      1.538802,
+      1.139922,
+      1.077642,
+      0.905688,
+      0.848126,
+      0.755565
+    ]
+  },
+  "input": {
+    "shape": [
+      1,
+      49,
+      10,
+      1
+    ],
+    "dtype": "int8",
+    "scale": 0.05717320740222931,
+    "zero_point": -9,
+    "formula": "q = clip(round(x / scale) + zero_point, -128, 127)"
+  },
+  "output": {
+    "shape": [
+      1,
+      3
+    ],
+    "dtype": "int8",
+    "scale": 0.00390625,
+    "zero_point": -128,
+    "formula": "probability = (q - zero_point) * scale"
+  },
+  "model": {
+    "architecture": "DS-CNN: Conv 10x4 stride 2 (64) + 4 depthwise separable blocks (64) + global average pool + dense softmax",
+    "parameters": 23747,
+    "int8_size_bytes": 46640,
+    "float32_tflite_size_bytes": 97148
+  },
+  "test_results_unseen_speakers": {
+    "test_clips": 321,
+    "float32_accuracy": 0.9844,
+    "int8_accuracy": 0.9875,
+    "int8_misses": 4,
+    "int8_false_alarms": 0,
+    "int8_threshold_sweep": [
+      {
+        "threshold": 0.5,
+        "misses": 4,
+        "false_alarms": 0
+      },
+      {
+        "threshold": 0.7,
+        "misses": 5,
+        "false_alarms": 0
+      },
+      {
+        "threshold": 0.9,
+        "misses": 7,
+        "false_alarms": 0
+      }
+    ]
+  },
+  "test_split_file": "test_split.csv"
+}
