@@ -1,0 +1,16 @@
+clip,word in clip,true class,prediction,confidence,P(stop),correct
+c6ee87a7_nohash_4.wav,stop,stop,stop,0.996,0.996,yes
+126403d4_nohash_0.wav,stop,stop,stop,0.996,0.996,yes
+063d48cf_nohash_0.wav,stop,stop,stop,0.961,0.961,yes
+e6515415_nohash_0.wav,stop,stop,stop,0.996,0.996,yes
+b3327675_nohash_2.wav,stop,stop,stop,0.996,0.996,yes
+6b7d5101_nohash_0.wav,no,_unknown_,_unknown_,0.996,0.004,yes
+c93d5e22_nohash_1.wav,yes,_unknown_,_unknown_,0.996,0.0,yes
+66cbe2b3_nohash_0.wav,no,_unknown_,_unknown_,0.996,0.004,yes
+c103a2d5_nohash_2.wav,yes,_unknown_,_unknown_,0.996,0.004,yes
+8e05039f_nohash_2.wav,left,_unknown_,_unknown_,0.996,0.0,yes
+test_white_0076.wav,white,_silence_,_silence_,0.992,0.004,yes
+test_motor_hum_0010.wav,motor_hum,_silence_,_silence_,0.996,0.0,yes
+test_pink_0004.wav,pink,_silence_,_silence_,0.992,0.004,yes
+test_motor_hum_0099.wav,motor_hum,_silence_,_silence_,0.996,0.0,yes
+test_motor_hum_0070.wav,motor_hum,_silence_,_silence_,0.996,0.0,yes

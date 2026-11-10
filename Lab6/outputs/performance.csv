@@ -1,0 +1,6 @@
+,value
+int8 model size,45.5 KB (limit 100 KB)
+inference per window (XNNPACK),0.050 ms
+inference per window (reference kernels),0.117 ms
+MFCC for 1 s of audio,4.14 ms
+total per 100 ms update,4.19 ms of the 100 ms budget (4.2%)

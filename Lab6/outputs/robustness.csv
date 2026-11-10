@@ -1,0 +1,6 @@
+test,clips,accuracy (%),misses,false stops
+Lab 5 test set (clean dataset clips),321,98.8,4,0
+Bench test (15 dataset clips),15,100.0,0,0
+"Live, close (about 30 cm)",20,50.0,10,0
+"Live, 1 m away",20,95.0,0,1
+"Live, with machine noise",20,90.0,1,1

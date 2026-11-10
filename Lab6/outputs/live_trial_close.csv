@@ -1,0 +1,21 @@
+prompt,word said,system did,outcome,peak stop score,loudest 1 s: prediction,confidence
+1,stop,ignored,missed stop,0.141,_unknown_,0.945
+2,stop,ignored,missed stop,0.164,_unknown_,0.945
+3,stop,ignored,missed stop,0.176,_unknown_,0.934
+4,down,ignored,correctly ignored,0.164,_unknown_,0.945
+5,left,ignored,correctly ignored,0.131,_unknown_,0.965
+6,stop,ignored,missed stop,0.094,_unknown_,0.961
+7,yes,ignored,correctly ignored,0.113,_unknown_,0.957
+8,stop,ignored,missed stop,0.262,_unknown_,0.949
+9,stop,ignored,missed stop,0.129,_unknown_,0.949
+10,shop,ignored,correctly ignored,0.25,_unknown_,0.859
+11,no,ignored,correctly ignored,0.188,_unknown_,0.855
+12,stop,ignored,missed stop,0.193,_unknown_,0.922
+13,up,ignored,correctly ignored,0.273,_unknown_,0.816
+14,go,ignored,correctly ignored,0.273,_unknown_,0.824
+15,hello,ignored,correctly ignored,0.195,_unknown_,0.867
+16,right,ignored,correctly ignored,0.234,_unknown_,0.852
+17,stop,ignored,missed stop,0.267,_unknown_,0.832
+18,stop,ignored,missed stop,0.309,_unknown_,0.82
+19,top,ignored,correctly ignored,0.273,_unknown_,0.77
+20,stop,ignored,missed stop,0.359,_unknown_,0.812
